@@ -7,9 +7,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RegisterPage implements OnInit {
 
+  form = {
+    name: null,
+    email: null,
+    password: null
+  }
+  
   constructor() { }
 
   ngOnInit() {
+  }
+
+  register(){
+    alert('Sucessuflly Register /n' + 
+    'Welcome' + `${this.form.email}`)
   }
 
 }
