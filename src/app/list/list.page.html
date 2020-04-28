@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Your To Do List</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div id="container">
+    <form #form="ngForm">
+      <div>
+        <h3 >Welcome to your To Do List!</h3> 
+      </div><br>
+      <div>
+        <ion-item>
+          <ion-input name="list" type="text" placeholder="Add a project to your list" ngModel required></ion-input>
+        </ion-item>        
+      </div>
+      <div>
+        <ion-button routerLink="/home" type="submit" [disabled]="form.invalid">Add</ion-button>
+      </div>
+    </form>
+  </div>
+</ion-content>
