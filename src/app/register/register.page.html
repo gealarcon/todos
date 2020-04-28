@@ -1,23 +1,17 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>register</ion-title>
-  </ion-toolbar>
-</ion-header>
-
-
 <ion-content>
-    <ion-content >
       <form class="box" action="FORM.html" method="post">
         <ion-grid>
-          <ion-row color="primary" justify-content-center>
-            <ion-col align-self-center size-md="6" size-lg="6" size-xs="10" size-xl="4">
+        
+          <ion-row class="ion-align-items-center" color="primary">
+            <ion-col></ion-col>
+            <ion-col size-md="6" size-lg="4" size-sm="6" size-xs="6" size-xl="4">
               <div text-center>
                 <h3 >Register Here</h3>
-                
               </div>
-              <br>
 
               <br>
+              <br>
+
               <div>
               
                 <ion-item>
@@ -31,15 +25,15 @@
                 <ion-button routerLink='/home' size="large" type="submit" (click)="register()" expand="block">Register</ion-button>
               </div>
               <div>
-                <ion-row>
-                <div text-center>
+                
               If you have an account, please <a routerLink='/login'>
                 login</a>
-                </div>
-            </ion-row></div>
+
+            </div>
             </ion-col>
+            <ion-col></ion-col>
           </ion-row>
         </ion-grid>
       </form>
-    </ion-content>
-  </ion-content>
+</ion-content>
+
