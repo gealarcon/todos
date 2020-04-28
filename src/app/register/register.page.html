@@ -15,14 +15,26 @@
               <div>
               
                 <ion-item>
-                  <ion-input name="email" type="email" placeholder="Email or Username" [(ngModel)]="form.email" ></ion-input>
+                  <ion-input name="email" type="email" placeholder="Email" [(ngModel)]="form.email" ></ion-input>
                 </ion-item>
                 <ion-item>
-                  <ion-input name="password" type="password" placeholder="Password" [(ngModel)]="form.password"></ion-input>
+                  <ion-input name="firstName" type="text" placeholder="First Name" [(ngModel)]="form.firstName" ></ion-input>
+                </ion-item>
+                <ion-item>
+                  <ion-input name="lastName" type="text" placeholder="Last Name" [(ngModel)]="form.lastName"></ion-input>
+                </ion-item>
+                <ion-item>
+                  <ion-datetime value="" placeholder="Birthday"></ion-datetime>
+                </ion-item>
+                <ion-item>
+                  <ion-input name="password" type="password" placeholder="Password" [(ngModel)]="form.password" ></ion-input>
+                </ion-item>
+                <ion-item>
+                  <ion-input name="password-check" type="password" placeholder="Verify Password" [(ngModel)]="form.passwordVerify"></ion-input>
                 </ion-item>
               </div>
               <div >
-                <ion-button routerLink='/home' size="large" type="submit" (click)="register()" expand="block">Register</ion-button>
+                <ion-button size="large" type="submit" (click)="register()" expand="block">Register</ion-button>
               </div>
               <div>
                 

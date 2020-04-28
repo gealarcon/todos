@@ -8,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 export class RegisterPage implements OnInit {
 
   form = {
-    name: null,
+    firstName: null,
+    lastName: null,
     email: null,
-    password: null
+    birthday: null,
+    password: null,
+    passwordVerify: null
+
   }
   
   constructor() { }
@@ -19,8 +23,20 @@ export class RegisterPage implements OnInit {
   }
 
   register(){
-    alert('Sucessuflly Register /n' + 
-    'Welcome' + `${this.form.email}`)
+    if( this.form.password === this.form.passwordVerify
+      && this.form.password != null && this.form.password != null){
+
+      alert('Successfully Register ' + 
+      'Welcome ' + `${this.form.firstName}`)
+    }
+    
+    else{
+      alert('Passwords did not match' + `${this.form.birthday}`)
+      this.form.password  = null;
+      this.form.passwordVerify = null;
+      console.log(this.form.birthday)
+    }
+    
   }
 
 }
