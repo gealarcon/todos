@@ -23,13 +23,9 @@ export class RegisterPage implements OnInit {
   }
 
   updateBirthdate($event) {
+    this.form.birthday = $event.slice(0,10);
+    console.log(this.form.birthday);
     
-    let date = ''
-    for (let i = 0; i < 10; i++){
-      date = date + $event[i];
-    }
-
-    this.form.birthday = date;
   }
 
   register(){
