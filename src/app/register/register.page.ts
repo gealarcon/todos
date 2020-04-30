@@ -22,19 +22,30 @@ export class RegisterPage implements OnInit {
   ngOnInit() {
   }
 
+  updateBirthdate($event) {
+    
+    let date = ''
+    for (let i = 0; i < 10; i++){
+      date = date + $event[i];
+    }
+
+    this.form.birthday = date;
+  }
+
   register(){
     if( this.form.password === this.form.passwordVerify
       && this.form.password != null && this.form.password != null){
+
 
       alert('Successfully Register ' + 
       'Welcome ' + `${this.form.firstName}`)
     }
     
     else{
-      alert('Passwords did not match' + `${this.form.birthday}`)
+      alert('Passwords did not match')
       this.form.password  = null;
       this.form.passwordVerify = null;
-      console.log(this.form.birthday)
+    
     }
     
   }
