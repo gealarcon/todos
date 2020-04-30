@@ -1,10 +1,4 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Login
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
+
 <ion-content>
   <ion-content>
     <form #form="ngForm" (ngSubmit)="login(form)">
@@ -23,14 +17,14 @@
               </div><br>
             <div padding>
               <ion-item>
-                <ion-input name="email" type="email" placeholder="Email or Username" ngModel required></ion-input>
+                <ion-input name="email" type="email" placeholder="Email or Username" [(ngModel)]="form.email"></ion-input>
               </ion-item>
-              <ion-item>
-                <ion-input name="password" type="password" placeholder="Password" ngModel required></ion-input>
+              <ion-item> 
+                <ion-input name="password" type="password" placeholder="Password" [(ngModel)]="form.password"></ion-input>
               </ion-item>
             </div>
             <div padding>
-              <ion-button routerLink='/list' size="large" type="submit" [disabled]="form.invalid" expand="block">Login</ion-button>
+              <ion-button (click) = "login()" size="large" type="submit" [disabled]="form.invalid" expand="block">Login</ion-button>
             </div>
             <div>
               <ion-row>

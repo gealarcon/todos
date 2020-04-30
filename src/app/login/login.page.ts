@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from "@angular/router";
-
+import { UserService } from "../user.service"
 
 @Component({
   selector: 'app-login',
@@ -9,9 +9,17 @@ import { Router } from "@angular/router";
 })
 export class LoginPage implements OnInit {
 
-  constructor(private router: Router) { }
+  form = {
+    email: null,
+    password: null,
+  };
+
+  constructor(private router: Router, private _userService: UserService) { }
 
   ngOnInit() {
   }
+login() {
+  this._userService.doLogIn(this.form)
+}
 
 }
