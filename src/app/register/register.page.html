@@ -13,7 +13,6 @@
               <br>
 
               <div>
-              
                 <ion-item>
                   <ion-input name="email" type="email" placeholder="Email" [(ngModel)]="form.email" ></ion-input>
                 </ion-item>
@@ -24,7 +23,7 @@
                   <ion-input name="lastName" type="text" placeholder="Last Name" [(ngModel)]="form.lastName"></ion-input>
                 </ion-item>
                 <ion-item>
-                  <ion-datetime value="" placeholder="Birthday"></ion-datetime>
+                  <ion-datetime placeholder="Birthday" #myPicker displayFormat='MM/DD/YYYY' (ionChange)="updateBirthdate(myPicker.value)"></ion-datetime>
                 </ion-item>
                 <ion-item>
                   <ion-input name="password" type="password" placeholder="Password" [(ngModel)]="form.password" ></ion-input>
@@ -37,11 +36,10 @@
                 <ion-button size="large" type="submit" (click)="register()" expand="block">Register</ion-button>
               </div>
               <div>
-                
               If you have an account, please <a routerLink='/login'>
                 login</a>
-
             </div>
+            
             </ion-col>
             <ion-col></ion-col>
           </ion-row>
