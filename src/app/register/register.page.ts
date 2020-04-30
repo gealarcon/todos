@@ -43,9 +43,15 @@ export class RegisterPage implements OnInit {
     
     else{
       alert('Passwords did not match')
+      var passwordField = document.getElementById('pw1');
+      passwordField.style.setProperty('--placeholder-color', 'red')
+      var verifyField = document.getElementById('pw2')
+      verifyField.style.setProperty('--placeholder-color', 'red')
+
+      console.log(passwordField);
+      
       this.form.password  = null;
       this.form.passwordVerify = null;
-    
     }
     
   }

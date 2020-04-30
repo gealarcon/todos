@@ -26,10 +26,10 @@
                   <ion-datetime placeholder="Birthday" #myPicker displayFormat='MM/DD/YYYY' (ionChange)="updateBirthdate(myPicker.value)"></ion-datetime>
                 </ion-item>
                 <ion-item>
-                  <ion-input name="password" type="password" placeholder="Password" [(ngModel)]="form.password" ></ion-input>
+                  <ion-input id="pw1" name="password" type="password" placeholder="Password" [(ngModel)]="form.password" ></ion-input>
                 </ion-item>
                 <ion-item>
-                  <ion-input name="password-check" type="password" placeholder="Verify Password" [(ngModel)]="form.passwordVerify"></ion-input>
+                  <ion-input id="pw2" name="password-check" type="password" placeholder="Verify Password" [(ngModel)]="form.passwordVerify"></ion-input>
                 </ion-item>
               </div>
               <div >
