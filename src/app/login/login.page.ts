@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from "@angular/router";
 import { UserService } from "../user.service"
 
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.page.html',
@@ -18,8 +19,11 @@ export class LoginPage implements OnInit {
 
   ngOnInit() {
   }
-login() {
-  this._userService.doLogIn(this.form)
-}
+
+  login() {
+    console.log("this.form:", this.form)
+    this._userService.doLogIn(this.form)
+    this.router.navigate(['/list'])
+  }
 
 }

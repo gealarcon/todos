@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { format } from 'url';
+//import { Format } from 'url';
 
 @Injectable({
   providedIn: 'root'
@@ -11,10 +11,11 @@ export class UserService {
   constructor() { }
 
   doLogIn(form){
+    console.log(form)
     if ( form.email === "user" && form.password === "password") {
       this.isLoggedIn = true
-    } else { // put in angular alert
-
+    } else { 
+          return null;
     }
   }
 
