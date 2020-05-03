@@ -10,21 +10,36 @@
             </div><br>
             <div>
               <ion-item>
-                <ion-input name="list" type="text" placeholder="Add a project to your list" ngModel required></ion-input>
+                <ion-input name="list" placeholder="Add a project to your list" [(ngModel)]="newTodo.title" (keyup.enter)="addTodo()"></ion-input>
               </ion-item>        
             </div>
             <div>
-              <ion-button routerLink="/home" type="submit" [disabled]="form.invalid">Add</ion-button>
+              <ion-button type="submit"(click)="addTodo()">Add</ion-button>
             </div>
+            <section *ngIf="todos.length > 0">
+              <ul  class="list">
+                <li *ngFor="let item of todos">
+                  <div>
+                    <input class="completeBox" type="checkbox" (click)="toggleTodoComplete(item)" [checked]="item.complete">
+                    <label>{{item.title}}</label>
+                    <button class="delete" (click)="removeTodo(item)">Delete</button>
+                  </div>
+                </li>
+              </ul>
+            </section>
+            <footer class="footer" *ngIf="todos.length > 0">
+              <span class="todo-count">
+                <strong>{{todos.length}}</strong> {{todos.length == 1 ? 'item' : 'items'}} left</span>
+            </footer>
           </ion-col>
           <ion-col></ion-col>
         </ion-row>
       </ion-grid>
     </form>
+    
+    
+    
   </div>
-
-
-  
 </ion-content>
 
 
