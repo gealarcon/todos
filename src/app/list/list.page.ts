@@ -26,6 +26,10 @@ export class ListPage implements OnInit {
     this.newTodo = new Todo();
   }
 
+  deleteTodo(todo) {
+    this._projectService.deleteTodo(todo.id)
+  }
+
   get todos() {
     return this._projectService.getAllTodos();
   }

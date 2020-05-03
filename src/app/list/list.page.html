@@ -22,7 +22,7 @@
                   <div>
                     <input class="completeBox" type="checkbox" (click)="toggleTodoComplete(item)" [checked]="item.complete">
                     <label>{{item.title}}</label>
-                    <button class="delete" (click)="removeTodo(item)">Delete</button>
+                    <button class="delete" (click)="deleteTodo(item)">Delete</button>
                   </div>
                 </li>
               </ul>

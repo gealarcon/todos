@@ -20,6 +20,12 @@ export class ProjectService {
     return this;
   }
 
+  deleteTodo(id) {
+    this.todos = this.todos
+      .filter(todo => todo.id !== id);
+    return this;
+  }
+
   getAllTodos() {
     return this.todos;
   }
